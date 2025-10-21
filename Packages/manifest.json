@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.htc.upm.vive.openxr": "file:C:/Users/manabeken5070user_2/Downloads/com.htc.upm.vive.openxr-2.5.1.tgz",
+    "com.htc.upm.vive.openxr": "file:C:/Users/manab/Downloads/com.htc.upm.vive.openxr-2.5.1.tgz",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.collab-proxy": "2.9.3",
     "com.unity.ide.rider": "3.0.38",
