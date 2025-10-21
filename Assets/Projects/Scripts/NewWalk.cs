@@ -98,36 +98,6 @@ public class NewWalk : MonoBehaviour
 
     void Update()
     {
-        //コントローラ値読み取り
-        leftHand = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        Vector2 L_stickInput = Vector2.zero;
-        Vector2 R_stickInput = Vector2.zero;
-
-        if (leftHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 L_axis))
-        {
-            L_stickInput.x = L_axis.x;
-            L_stickInput.y = L_axis.y;
-        }
-        if (rightHand.TryGetFeatureValue(CommonUsages.gripButton, out bool GripButton))
-        {
-            JumpButton = GripButton;
-        }
-        if (leftHand.TryGetFeatureValue(CommonUsages.triggerButton, out bool TriggerButton))
-        {
-            thrastor = TriggerButton;
-        }
-        if (leftHand.TryGetFeatureValue(CommonUsages.menuButton, out bool CockpitButton))
-        {
-            isCockpitActivate = CockpitButton;
-        }
-
-        if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 R_axis))
-        {
-            R_stickInput.x = R_axis.x;
-            R_stickInput.y = R_axis.y;
-        }
-
         //各変数初期化
 
         //入力をしていない間、値が引き継がれるとずっと移動してしまう。移動量が引き継がれないように初期化しておく
@@ -156,6 +126,37 @@ public class NewWalk : MonoBehaviour
 
         MoveX = 0f;
         MoveZ = 0f;
+
+        //コントローラ値読み取り
+        leftHand = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        Vector2 L_stickInput = Vector2.zero;
+        Vector2 R_stickInput = Vector2.zero;
+
+        if (leftHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 L_axis))
+        {
+            L_stickInput.x = L_axis.x;
+            L_stickInput.y = L_axis.y;
+        }
+        if (rightHand.TryGetFeatureValue(CommonUsages.gripButton, out bool GripButton))
+        {
+            JumpButton = GripButton;
+        }
+        //Debug.Log($"is JumpButton : {JumpButton}");
+        if (leftHand.TryGetFeatureValue(CommonUsages.triggerButton, out bool TriggerButton))
+        {
+            thrastor = TriggerButton;
+        }
+        if (leftHand.TryGetFeatureValue(CommonUsages.menuButton, out bool CockpitButton))
+        {
+            isCockpitActivate = CockpitButton;
+        }
+
+        if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 R_axis))
+        {
+            R_stickInput.x = R_axis.x;
+            R_stickInput.y = R_axis.y;
+        }
 
         //水平移動管理　vector3 localMoveへ代入
         //前移動
@@ -216,7 +217,7 @@ public class NewWalk : MonoBehaviour
         /// y軸表現以下　jumpingposへ代入
         /// 
         //上昇下降の制御
-        Debug.Log($"is KeyCode.UpArrow : {Input.GetKey(KeyCode.UpArrow)}");
+        
         if (Input.GetKey(KeyCode.UpArrow) || JumpButton)
         {
             isGrounded = false;
