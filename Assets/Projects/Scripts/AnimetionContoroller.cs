@@ -27,10 +27,11 @@ public class AnimationController : MonoBehaviour
     /// <summary>
     /// その他の状態（ジャンプ、ブーストなど）を制御する
     /// </summary>
-    public void UpdateSpecialStates(bool isBoosting, bool isJumping, bool isFalling)
+    public void UpdateSpecialStates(bool isBoosting, bool isJumping, bool isFalling,float isTurning)
     {
         animator.SetBool("isBoosting", isBoosting);
         animator.SetBool("isJumping", isJumping);
         animator.SetBool("isFalling", isFalling);
+        animator.SetFloat("isTurning", isTurning);
     }
 }

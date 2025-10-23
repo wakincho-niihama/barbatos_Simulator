@@ -51,6 +51,7 @@ public class NewWalk : MonoBehaviour
     private bool isBoosting;
     private bool isJumping;
     private bool isFalling;
+    private float isTurning;
     private bool isIdle;
 
     //アニメーション用変数
@@ -120,6 +121,7 @@ public class NewWalk : MonoBehaviour
         isGrounded = false;
         isFalling = false;
         isIdle = false;
+        isTurning = 0;
 
         thrastor = false;
         JumpButton = false;
@@ -256,11 +258,13 @@ public class NewWalk : MonoBehaviour
         RotationVelocity = 0f;
         if (R_stickInput.x > 0.4f || Input.GetKey(KeyCode.RightArrow))
         {
+            isTurning = 1;
             step = stepHeight;
             RotationVelocity = 1f;
         }
         else if (R_stickInput.x < -0.4f || Input.GetKey(KeyCode.LeftArrow))
         {
+            isTurning = -1;
             step = stepHeight;
             RotationVelocity = -1f;
         }
@@ -312,7 +316,7 @@ public class NewWalk : MonoBehaviour
 
         // AnimationControllerに値を送る
         animationController.UpdateMovement(MoveX, MoveZ);
-        animationController.UpdateSpecialStates(isBoosting, isJumping, isFalling);
+        animationController.UpdateSpecialStates(isBoosting, isJumping, isFalling,isTurning);
 
     }
 }
