@@ -31,7 +31,14 @@ ModelImporter:
       '\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Dash' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Spine' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\nClip '\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping'
+      and has rotation animation that will be discarded.\n\nClip '\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Idle_Motion'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      '\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping_charge' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Spine' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip '\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping_fly'
       has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
@@ -61,6 +68,35 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|1.StandPosition"
+      takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|1.StandPosition"
+      internalID: 704959374590604681
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Attack_Gun"
       takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Attack_Gun"
@@ -153,14 +189,14 @@ ModelImporter:
       takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Dash"
       internalID: -6861738380560869263
       firstFrame: 0
-      lastFrame: 59
+      lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -207,6 +243,35 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Idle_Motion"
+      takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Idle_Motion"
+      internalID: -1117956503225316367
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Is_inSky"
       takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Is_inSky"
       internalID: 7551518758664180299
@@ -218,7 +283,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -236,9 +301,38 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping"
-      takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping"
-      internalID: -8646788200585220264
+      name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping_charge"
+      takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping_charge"
+      internalID: 1658809355658211364
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping_fly"
+      takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Jumping_fly"
+      internalID: 7893714073590046913
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -247,7 +341,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -276,7 +370,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -305,36 +399,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|StandPosition"
-      takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|StandPosition"
-      internalID: 9063729888716594529
-      firstFrame: 0
-      lastFrame: 0
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -363,7 +428,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -392,7 +457,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -421,7 +486,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -450,7 +515,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -478,11 +543,11 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
+      hasAdditiveReferencePose: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -550,7 +615,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 1
+    optimizeBones: 0
     generateMeshLods: 0
     meshLodGenerationFlags: 0
     maximumMeshLod: -1
@@ -986,464 +1051,464 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: CockpitCover
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0.000000018353148, y: 16.65681, z: 0.2836324}
-      rotation: {x: -6.123235e-17, y: 1, z: 6.123235e-17, w: 0.00000019470718}
+      position: {x: -0.000000014202669, y: 16.6568, z: 0.2836324}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: HandJoint.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 8.239886, y: 16.577112, z: 1.7137147}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: HandJoint.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -8.239887, y: 16.577114, z: 1.7137089}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Hito.1.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.392211, y: 16.550117, z: 1.4310966}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Hito.2.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.630519, y: 16.572287, z: 1.4288293}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Hito.3.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.780946, y: 16.550117, z: 1.4310966}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Hito.4.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.02425, y: 16.572287, z: 1.4288291}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Hito.5.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.1690645, y: 16.550116, z: 1.4310964}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Hito.6.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.478134, y: 16.572119, z: 1.431091}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Indexfinger_Body_1_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.630515, y: 16.572285, z: 1.4288403}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Indexfinger_Body_2_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.024247, y: 16.572285, z: 1.4288404}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Indexfinger_Body_3_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.478132, y: 16.572119, z: 1.4311001}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Indexfinger_Joint_1_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.392207, y: 16.55012, z: 1.4311036}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Indexfinger_Joint_2_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.780943, y: 16.55012, z: 1.4311036}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Indexfinger_Joint_3_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.169063, y: 16.550123, z: 1.4311037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.1.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.392207, y: 16.55012, z: 2.0259988}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.1.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.392211, y: 16.550117, z: 2.025988}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.2.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.630515, y: 16.572285, z: 2.0237315}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.2.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.630519, y: 16.572287, z: 2.0237215}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.3.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.780943, y: 16.55012, z: 2.0259988}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.3.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.780946, y: 16.550117, z: 2.0259879}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.4.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.024247, y: 16.572285, z: 2.0237315}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.4.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.02425, y: 16.572287, z: 2.0237215}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.5.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.169063, y: 16.550123, z: 2.025999}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Ko.5.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.169064, y: 16.550116, z: 2.0259879}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.1.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.392207, y: 16.55012, z: 1.8318754}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.1.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.392211, y: 16.550117, z: 1.8318655}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.2.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.630515, y: 16.572285, z: 1.8296101}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.2.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.630519, y: 16.572287, z: 1.829599}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.3.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.780943, y: 16.55012, z: 1.8318754}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.3.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.780946, y: 16.550117, z: 1.8318655}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.4.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.024247, y: 16.572285, z: 1.8296103}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.4.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.02425, y: 16.572287, z: 1.829599}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.5.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.169063, y: 16.550123, z: 1.8318754}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.5.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.1690645, y: 16.550116, z: 1.8318655}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.6.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.478132, y: 16.572285, z: 1.8296098}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Kusu.6.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.478134, y: 16.572285, z: 1.8295995}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Larm.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 3.9291945, y: 16.501, z: 1.3776003}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Larm.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 6.435554, y: 16.501032, z: 1.8135986}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Larmjoint.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 2.711893, y: 16.501167, z: 1.6497595}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Larmjoint.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 4.4008718, y: 16.501287, z: 1.9797555}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Lleg.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 1.8500257, y: 10.61635, z: 0.9142037}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Lleg.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 2.6187313, y: 5.394288, z: 1.838074}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Lleg.3
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 3.3767164, y: 0.603672, z: 1.2264177}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Llegjoint.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 1.4884509, y: 11.804386, z: 0.9078597}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Llegjoint.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 3.3469415, y: 1.2643604, z: 1.5958104}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: LowerBody
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -0.0000009048381, y: 14.447287, z: 1.5346004}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Middlefinger_Body_1_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.630515, y: 16.572285, z: 1.6229631}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Middlefinger_Body_2_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.024247, y: 16.572285, z: 1.6229632}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Middlefinger_Body_3_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.478132, y: 16.572285, z: 1.6229618}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Middlefinger_Joint_1_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.392207, y: 16.55012, z: 1.6252266}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Middlefinger_Joint_2_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.780943, y: 16.55012, z: 1.6252266}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Middlefinger_Joint_3_L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.169063, y: 16.550123, z: 1.6252269}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Naka.1.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.392211, y: 16.550117, z: 1.625219}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Naka.2.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.630519, y: 16.572287, z: 1.6229516}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Naka.3.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.780946, y: 16.550117, z: 1.6252187}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Naka.4.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.02425, y: 16.572287, z: 1.6229515}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Naka.5.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.1690645, y: 16.550116, z: 1.6252187}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Naka.6.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.478134, y: 16.572285, z: 1.6229525}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Neck
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -0.0000011772499, y: 17.340927, z: 1.7104149}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.1.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 8.570399, y: 16.36328, z: 1.2551227}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.1.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -8.570405, y: 16.36328, z: 1.2551147}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.2.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 8.731343, y: 16.361008, z: 0.9994131}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.2.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -8.765417, y: 16.361012, z: 1.0094227}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.3.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 8.907581, y: 16.36328, z: 0.9382373}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.3.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -8.954289, y: 16.36328, z: 0.9277259}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.4.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 9.298001, y: 16.363274, z: 0.8565672}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Oya.4.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -9.327091, y: 16.363272, z: 0.8379343}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rarm.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -3.9292028, y: 16.501, z: 1.377592}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rarm.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -6.435558, y: 16.501036, z: 1.8135902}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rarmjoint.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -2.711897, y: 16.501167, z: 1.6497588}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rarmjoint.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -4.4008727, y: 16.501287, z: 1.9797485}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rleg.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -1.8500346, y: 10.616344, z: 0.91420025}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rleg.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -2.612106, y: 5.4318857, z: 1.8304012}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rleg.3
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -3.3645215, y: 0.603673, z: 1.2264132}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rlegjoint.1
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -1.4884577, y: 11.804386, z: 0.9078564}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Rlegjoint.2
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -3.346949, y: 1.2643604, z: 1.5958073}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: UpperBody
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 0.0000020273146, y: 15.775985, z: 1.9638127}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: UpperBody.001
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: 0.00000081396763, y: 15.5242195, z: -0.24985361}
-      rotation: {x: -6.123235e-17, y: 1, z: 6.123235e-17, w: 0.00000019470718}
+      position: {x: 0.00000075408025, y: 15.517375, z: -0.24986911}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: base.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 8.880041, y: 16.696348, z: 1.7127941}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: base.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -8.880042, y: 16.696356, z: 1.7127842}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: head
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -0.0000008583884, y: 18.61337, z: 1.3680955}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: ko.6.L
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: 10.478132, y: 16.572285, z: 2.023732}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: ko.6.R
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -10.478134, y: 16.572285, z: 2.0237222}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: waist
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -0.00000045984052, y: 12.863206, z: 0.54558563}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2"
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      position: {x: -0.0007090546, y: 14.466738, z: 1.4662988}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Master
       parentName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2"
-      position: {x: -0.0000004854148, y: -1.0423366, z: 13.090491}
-      rotation: {x: -6.123234e-17, y: -0.00000008940697, z: 1, w: 6.617445e-24}
-      scale: {x: 1.0000106, y: 1.0000001, z: 1.0000001}
+      position: {x: 0.00070856925, y: 0.42396224, z: -1.3762474}
+      rotation: {x: -6.123234e-17, y: 0.00000008940697, z: 1, w: -6.123234e-17}
+      scale: {x: 1.000021, y: 1, z: 1}
     - name: Hip
       parentName: Master
-      position: {x: -0.0000012254366, y: 0, z: 0}
-      rotation: {x: -0.00000015057118, y: 0.7071068, z: -0.7071068, w: 0.00000015057118}
-      scale: {x: 1.0000412, y: 1.0000411, z: 0.99999964}
+      position: {x: -0.0000012254459, y: 0, z: 0}
+      rotation: {x: -0.00000024395595, y: 0.7071067, z: -0.70710695, w: 0.00000024395595}
+      scale: {x: 1.0000625, y: 1.0000622, z: 1.0000207}
     - name: Spine
       parentName: Hip
-      position: {x: -2.1316282e-14, y: 0, z: 6.461498e-14}
-      rotation: {x: 0.98931754, y: 0.000000051075055, z: -0.000000062228494, w: 0.1457766}
-      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000105}
+      position: {x: 1.1908696e-11, y: 0, z: 1.07176046e-10}
+      rotation: {x: 0.98931766, y: 0.000000055707265, z: -0.00000009367712, w: 0.14577617}
+      scale: {x: 1.0000002, y: 1, z: 1.0000083}
     - name: Chest
       parentName: Spine
-      position: {x: -0.000000038560984, y: 2.5343552, z: -0.00000029057264}
-      rotation: {x: 0.21986014, y: 0.00000007005009, z: 0.00000007898976, w: 0.97553146}
-      scale: {x: 1.0000211, y: 0.99960953, z: 1.0004123}
+      position: {x: -6.442491e-11, y: 2.534355, z: -0.000000027922269}
+      rotation: {x: 0.21985874, y: 0.00000007005559, z: 0.00000007898506, w: 0.9755318}
+      scale: {x: 1.0000417, y: 0.99961, z: 1.000433}
     - name: Neck_Body
       parentName: Chest
-      position: {x: 0.000000049323717, y: 1.682263, z: 0.00000011175871}
-      rotation: {x: -0.075301826, y: 0.000000022814014, z: -0.000000034183934, w: 0.99716085}
-      scale: {x: 1.0000626, y: 0.9999856, z: 1.0000725}
+      position: {x: -2.959144e-11, y: 1.6822629, z: -7.730633e-11}
+      rotation: {x: -0.075301304, y: 0.0000000228103, z: -0.000000034180154, w: 0.99716085}
+      scale: {x: 1, y: 0.9999744, z: 1.0000244}
     - name: Head
       parentName: Neck_Body
-      position: {x: -0.000000041202384, y: 0.9935643, z: -0.00000016039519}
-      rotation: {x: -0, y: 7.105427e-14, z: -4.4408917e-15, w: 1}
-      scale: {x: 1.0000011, y: 0.9999989, z: 1.000004}
+      position: {x: -5.0073508e-11, y: 0.99356467, z: -1.07150566e-10}
+      rotation: {x: 0.000000007450579, y: 1.0658138e-13, z: 8.992804e-15, w: 1}
+      scale: {x: 1, y: 1.0000023, z: 0.9999985}
     - name: Head_end
       parentName: Head
       position: {x: -0, y: 1.6136093, z: 0}
@@ -1451,39 +1516,39 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Shoulder.L
       parentName: Chest
-      position: {x: -0.4, y: 1.5833975, z: 0.015017942}
-      rotation: {x: -0.65261483, y: 0.5188558, z: 0.44599444, w: 0.32553285}
-      scale: {x: 1.0000582, y: 1.0000385, z: 0.9999906}
+      position: {x: -0.40000004, y: 1.5833967, z: 0.015017585}
+      rotation: {x: -0.65261453, y: 0.51885486, z: 0.4459957, w: 0.32553318}
+      scale: {x: 1.0000577, y: 1.0000153, z: 0.99995935}
     - name: UpperArm.L
       parentName: Shoulder.L
-      position: {x: 0.05985701, y: 2.2506626, z: 0.25677866}
-      rotation: {x: 0.12994558, y: -0.12093893, z: -0.023565581, w: 0.9838357}
-      scale: {x: 0.9964365, y: 0.9985339, z: 1.0051869}
+      position: {x: 0.05985698, y: 2.2506626, z: 0.2567785}
+      rotation: {x: 0.12994428, y: -0.12093805, z: -0.023566497, w: 0.983836}
+      scale: {x: 0.9962917, y: 0.99839616, z: 1.0054605}
     - name: LowerArm.L
       parentName: UpperArm.L
-      position: {x: 0.00000086426735, y: 2.1826365, z: -0.00000010430813}
-      rotation: {x: -0.001877903, y: 0.00020433952, z: -0.08106772, w: -0.99670684}
-      scale: {x: 0.99957156, y: 1.0004388, z: 1.0000099}
+      position: {x: -0.000000019557774, y: 2.1826363, z: -0.000000056723366}
+      rotation: {x: -0.0018874538, y: 0.00020363163, z: -0.081067175, w: -0.9967069}
+      scale: {x: 0.99957174, y: 1.0004357, z: 1.0000162}
     - name: Hand.L
       parentName: LowerArm.L
-      position: {x: 0.00000014156103, y: 3.4390116, z: -0.000000044703484}
-      rotation: {x: -0.036594234, y: 0.039050996, z: 0.03236326, w: -0.99804235}
-      scale: {x: 1.0006114, y: 0.9989594, z: 1.0005566}
+      position: {x: 0.0000000037252903, y: 3.439011, z: -0.00000028037792}
+      rotation: {x: -0.036586326, y: 0.039051276, z: 0.03236281, w: -0.9980427}
+      scale: {x: 1.0005971, y: 0.9989201, z: 1.000544}
     - name: IndexProximal.L
       parentName: Hand.L
-      position: {x: -0.2821942, y: 1.1617193, z: -0.017606128}
-      rotation: {x: -0.011058845, y: -0.037785973, z: 0.002014183, w: -0.99922264}
-      scale: {x: 1.0025821, y: 0.9994927, z: 0.99790955}
+      position: {x: -0.28219393, y: 1.1617202, z: -0.017606506}
+      rotation: {x: 0.0378388, y: -0.037839342, z: 0.00016333125, w: -0.99856716}
+      scale: {x: 1.0027064, y: 1.0016391, z: 0.99563825}
     - name: IndexIntermediate.L
       parentName: IndexProximal.L
-      position: {x: -0.0000008586794, y: 0.38873753, z: -0.00000020861626}
-      rotation: {x: 0.03826568, y: 0.000008959319, z: 0.000005875071, w: 0.99926764}
-      scale: {x: 1.0000213, y: 0.99477834, z: 1.0052744}
+      position: {x: 0.0000000049035407, y: 0.38873777, z: -0.00000035246157}
+      rotation: {x: -0.00000003725288, y: -0.000000659376, z: -0.00000007334161, w: 1}
+      scale: {x: 0.99999523, y: 0.9999943, z: 0.9999856}
     - name: IndexDistal.L
       parentName: IndexIntermediate.L
-      position: {x: 0.0000017136335, y: 0.3881193, z: 0.000000029802322}
-      rotation: {x: -0.038471743, y: -0.0000060193047, z: -0.0000034137447, w: 0.99925977}
-      scale: {x: 1.0000114, y: 1.0114498, z: 0.9888023}
+      position: {x: 0.0000000033808476, y: 0.38811997, z: -0.000000035589725}
+      rotation: {x: -0.000000003725146, y: -0, z: 0.00000021629954, w: 1}
+      scale: {x: 1.0000176, y: 1.0000187, z: 1.0000188}
     - name: IndexDistal.L_end
       parentName: IndexDistal.L
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1491,19 +1556,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: MiddleProximal.L
       parentName: Hand.L
-      position: {x: -0.08916956, y: 1.1611025, z: -0.03223235}
-      rotation: {x: 0.016865624, y: -0.037827417, z: 0.0009574604, w: -0.9991415}
-      scale: {x: 1.0025824, y: 1.0006622, z: 0.9967559}
+      position: {x: -0.08916843, y: 1.1611024, z: -0.03223241}
+      rotation: {x: 0.037838887, y: -0.03783928, z: 0.00016314634, w: -0.99856716}
+      scale: {x: 1.0026951, y: 1.0016325, z: 0.9956277}
     - name: MiddleIntermediate.L
       parentName: MiddleProximal.L
-      position: {x: -0.0000008456409, y: 0.3887378, z: 0.000000059604645}
-      rotation: {x: 0.036957834, y: 0.000013481819, z: 0.00000787817, w: 0.9993168}
-      scale: {x: 1.0000103, y: 0.99767685, z: 1.0023243}
+      position: {x: -0.0000000048880793, y: 0.3887376, z: 0.00000077463267}
+      rotation: {x: 0.000000052154032, y: -0.0000005885955, z: -0.0000002525047, w: 1}
+      scale: {x: 1.0000011, y: 1.0000006, z: 0.99999607}
     - name: MiddleDistal.L
       parentName: MiddleIntermediate.L
-      position: {x: 0.00000044703484, y: 0.38811997, z: -0.0000004172325}
-      rotation: {x: -0.040292956, y: 0.000000035372253, z: 0.00000018673083, w: 0.9991879}
-      scale: {x: 1.0000187, y: 1.0041096, z: 0.9959459}
+      position: {x: -0.000000007690176, y: 0.38811967, z: -0.00000014359361}
+      rotation: {x: -0.000000014901131, y: -0, z: 0.000000036554393, w: 1}
+      scale: {x: 0.99999636, y: 1.0000007, z: 1.0000044}
     - name: MiddleDistal.L_end
       parentName: MiddleDistal.L
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1511,19 +1576,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: RingProximal.L
       parentName: Hand.L
-      position: {x: 0.119506225, y: 1.1604351, z: -0.04804387}
-      rotation: {x: 0.017100165, y: -0.03782775, z: 0.0009484678, w: -0.9991376}
-      scale: {x: 1.0026025, y: 1.0006765, z: 0.99675673}
+      position: {x: 0.11950779, y: 1.1604352, z: -0.048044026}
+      rotation: {x: 0.037838887, y: -0.03783928, z: 0.00016314634, w: -0.99856716}
+      scale: {x: 1.0026951, y: 1.0016325, z: 0.9956277}
     - name: RingIntermediate.L
       parentName: RingProximal.L
-      position: {x: -0.0000007059425, y: 0.3887377, z: 0.00000032782555}
-      rotation: {x: 0.036958635, y: 0.000013172618, z: 0.000008657744, w: 0.9993168}
-      scale: {x: 1.0000224, y: 0.9977315, z: 1.0023178}
+      position: {x: -0.0000000036875463, y: 0.38873735, z: 0.0000002716531}
+      rotation: {x: 0.000000052154032, y: -0.0000005885955, z: -0.0000002525047, w: 1}
+      scale: {x: 1.0000011, y: 1.0000006, z: 0.99999607}
     - name: RingDistal.L
       parentName: RingIntermediate.L
-      position: {x: -0.0000004414469, y: 0.3881197, z: -0.000000029802322}
-      rotation: {x: -0.040300455, y: -0.000000040053333, z: 0.0000000550768, w: 0.9991876}
-      scale: {x: 1.0000099, y: 1.0040983, z: 0.9959497}
+      position: {x: 0.000000025343468, y: 0.38811964, z: -0.00000001589332}
+      rotation: {x: -0.000000014901131, y: -0, z: 0.000000036554393, w: 1}
+      scale: {x: 0.99999636, y: 1.0000007, z: 1.0000044}
     - name: RingDistal.L_end
       parentName: RingDistal.L
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1531,19 +1596,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: LittleProximal.L
       parentName: Hand.L
-      position: {x: 0.30992424, y: 1.1598251, z: -0.06247302}
-      rotation: {x: 0.0111347595, y: -0.037821356, z: 0.0011744207, w: -0.99922186}
-      scale: {x: 1.002593, y: 1.0004354, z: 0.99699366}
+      position: {x: 0.3099247, y: 1.1598251, z: -0.062472872}
+      rotation: {x: 0.037838887, y: -0.03783928, z: 0.00016314634, w: -0.99856716}
+      scale: {x: 1.0026951, y: 1.0016322, z: 0.9956277}
     - name: LittleIntermediate.L
       parentName: LittleProximal.L
-      position: {x: 0.00000036135316, y: 0.3887379, z: 0.0000005066395}
-      rotation: {x: 0.037199695, y: 0.000012807539, z: 0.000007820368, w: 0.9993079}
-      scale: {x: 1.000011, y: 0.9969148, z: 1.0030987}
+      position: {x: 0.00000005696529, y: 0.38873756, z: -0.000000024535666}
+      rotation: {x: 0.000000052154032, y: -0.0000005885955, z: -0.0000002525047, w: 1}
+      scale: {x: 1.0000011, y: 1.0000012, z: 0.99999547}
     - name: LiitleDistal.L
       parentName: LittleIntermediate.L
-      position: {x: 0.00000076182187, y: 0.3881197, z: -0.00000011920929}
-      rotation: {x: -0.040285572, y: 0.000000030463486, z: 0.00000021142043, w: 0.99918824}
-      scale: {x: 1.0000287, y: 1.004559, z: 0.995517}
+      position: {x: -0.000000021726066, y: 0.3881196, z: -0.00000026445298}
+      rotation: {x: -0.000000014901131, y: -0, z: 0.000000036554393, w: 1}
+      scale: {x: 0.99999636, y: 0.99999994, z: 1.0000032}
     - name: LiitleDistal.L_end
       parentName: LiitleDistal.L
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1551,19 +1616,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: ThumbProximal.L
       parentName: Hand.L
-      position: {x: -0.18976314, y: 0.3858755, z: -0.14990696}
-      rotation: {x: 0.006564521, y: -0.06191543, z: -0.4742824, w: -0.8781683}
-      scale: {x: 1.0031117, y: 1.0009897, z: 0.99590236}
+      position: {x: -0.18976203, y: 0.38587582, z: -0.14990759}
+      rotation: {x: 0.006560314, y: -0.06192022, z: -0.47428855, w: -0.87816465}
+      scale: {x: 1.003227, y: 1.0011088, z: 0.99562865}
     - name: ThumbIntermediate.L
       parentName: ThumbProximal.L
-      position: {x: -0.00000020861626, y: 0.2777555, z: 0.00000043213367}
-      rotation: {x: 0.00006321209, y: 0.0000029653293, z: -0.018300835, w: 0.9998325}
-      scale: {x: 0.9910591, y: 1.0090258, z: 1.0000038}
+      position: {x: 0.00000016763806, y: 0.27775642, z: -0.000000014901161}
+      rotation: {x: 0.00006900116, y: 0.0000005401666, z: -0.018298343, w: 0.9998326}
+      scale: {x: 0.99102426, y: 1.0090574, z: 0.9999856}
     - name: ThumbDistal.L
       parentName: ThumbIntermediate.L
-      position: {x: 0.00000029802322, y: 0.45943856, z: 0.00000052154064}
-      rotation: {x: 0.000035426492, y: -0.0000040506493, z: -0.03215417, w: 0.999483}
-      scale: {x: 1.0284408, y: 0.97248185, z: 1.0000024}
+      position: {x: -0, y: 0.45943755, z: -0.000000029802322}
+      rotation: {x: 0.000038207898, y: -0.0000070534306, z: -0.032167856, w: 0.9994826}
+      scale: {x: 1.028836, y: 0.97216326, z: 1.0000429}
     - name: ThumbDistal.L_end
       parentName: ThumbDistal.L
       position: {x: -0, y: 0.8474628, z: 0}
@@ -1571,39 +1636,39 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Shoulder.R
       parentName: Chest
-      position: {x: 0.39999983, y: 1.5833976, z: 0.015018128}
-      rotation: {x: -0.65261465, y: -0.51885575, z: -0.4459949, w: 0.32553244}
-      scale: {x: 1.0000707, y: 1.0000479, z: 0.99999917}
+      position: {x: 0.3999998, y: 1.5833964, z: 0.015017926}
+      rotation: {x: -0.6526142, y: -0.518855, z: -0.44599602, w: 0.3255331}
+      scale: {x: 1.0000504, y: 1.0000029, z: 0.9999478}
     - name: UpperArm.R
       parentName: Shoulder.R
-      position: {x: -0.0573591, y: 2.325807, z: 0.26635224}
-      rotation: {x: 0.13121922, y: 0.12107642, z: 0.02332422, w: 0.98365545}
-      scale: {x: 0.99641174, y: 0.9984657, z: 1.005157}
+      position: {x: -0.057359293, y: 2.3258066, z: 0.26635152}
+      rotation: {x: 0.1312181, y: 0.121075824, z: 0.023325132, w: 0.9836557}
+      scale: {x: 0.99629945, y: 0.99833494, z: 1.0054646}
     - name: LowerArm.R
       parentName: UpperArm.R
-      position: {x: 0.000000059604645, y: 2.1080945, z: 0.00000023841858}
-      rotation: {x: -0.0000043064347, y: -0.00000090152, z: -0.08085178, w: 0.99672616}
-      scale: {x: 0.9995382, y: 1.0004816, z: 1.0000266}
+      position: {x: 0.000000044703484, y: 2.1080954, z: -0.00000041098673}
+      rotation: {x: 0.000003874299, y: -0.0000017136323, z: -0.08084877, w: 0.99672645}
+      scale: {x: 0.99952364, y: 1.0004251, z: 0.99998254}
     - name: Hand.R
       parentName: LowerArm.R
-      position: {x: -0.000000059604645, y: 3.4390123, z: -0.00000059604645}
-      rotation: {x: 0.036594905, y: 0.039051056, z: 0.03236323, w: 0.99804235}
-      scale: {x: 1.0005982, y: 0.99903804, z: 1.0004097}
+      position: {x: 0.000000024214387, y: 3.4390125, z: -0.00000034482466}
+      rotation: {x: 0.03658645, y: 0.03905134, z: 0.032363098, w: 0.99804264}
+      scale: {x: 1.0005592, y: 0.9990417, z: 1.0004035}
     - name: IndexProximal.R
       parentName: Hand.R
-      position: {x: 0.2821943, y: 1.1617205, z: -0.0176059}
-      rotation: {x: -0.078585476, y: -0.037814315, z: -0.0013822166, w: 0.996189}
-      scale: {x: 1.0025871, y: 1.0029489, z: 0.9945146}
+      position: {x: 0.28219417, y: 1.1617205, z: -0.017606944}
+      rotation: {x: -0.03783902, y: -0.037839394, z: 0.00016300323, w: 0.9985672}
+      scale: {x: 1.0027268, y: 1.0015963, z: 0.99579966}
     - name: IndexIntermediate.R
       parentName: IndexProximal.R
-      position: {x: -0.0000004206995, y: 0.38873696, z: 0.00000011920929}
-      rotation: {x: -0.04129218, y: 0.0000011175865, z: 0.00000091781794, w: 0.9991472}
-      scale: {x: 1.0000108, y: 0.997093, z: 1.0029467}
+      position: {x: 2.5238478e-10, y: 0.3887375, z: 0.00000015333349}
+      rotation: {x: 0.00000012665984, y: 0.00000043585885, z: -0.00000004551838, w: 1}
+      scale: {x: 0.9999922, y: 0.99999315, z: 0.99999034}
     - name: IndexDistal.R
       parentName: IndexIntermediate.R
-      position: {x: -0.000000086227374, y: 0.38811976, z: 0.000001013279}
-      rotation: {x: -0.011262101, y: -0.000000022529457, z: -0.0000000049488205, w: 0.9999366}
-      scale: {x: 0.99999917, y: 0.9993335, z: 1.0006621}
+      position: {x: -0.0000000055537157, y: 0.38811994, z: -0.000000008211509}
+      rotation: {x: -0.000000059604623, y: 0.000000026076995, z: -0.00000003527385, w: 1}
+      scale: {x: 1.000002, y: 0.9999994, z: 1.0000019}
     - name: IndexDistal.R_end
       parentName: IndexDistal.R
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1611,19 +1676,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: MiddleProximal.R
       parentName: Hand.R
-      position: {x: 0.08916912, y: 1.161103, z: -0.032231927}
-      rotation: {x: -0.091428466, y: -0.038398664, z: -0.0075902846, w: 0.99504215}
-      scale: {x: 1.0025982, y: 1.0038784, z: 0.9936287}
+      position: {x: 0.08916873, y: 1.1611032, z: -0.032232452}
+      rotation: {x: -0.037838936, y: -0.03783947, z: 0.00016281941, w: 0.99856716}
+      scale: {x: 1.0026954, y: 1.0015755, z: 0.9957679}
     - name: MiddleIntermediate.R
       parentName: MiddleProximal.R
-      position: {x: -0.00000014721991, y: 0.3887363, z: 0.000000059604645}
-      rotation: {x: 0.04121416, y: -0.0000009834761, z: -0.00000068428886, w: 0.9991504}
-      scale: {x: 1.000019, y: 1.0048069, z: 0.9952422}
+      position: {x: -0.000000016346348, y: 0.38873774, z: 0.000000080768615}
+      rotation: {x: -0.000000055879333, y: 0.0000005625186, z: 0.0000002826563, w: 1}
+      scale: {x: 1.0000119, y: 1.0000228, z: 1.0000021}
     - name: MiddleDistal.R
       parentName: MiddleIntermediate.R
-      position: {x: -0.00000010390522, y: 0.38811988, z: -0.00000059604645}
-      rotation: {x: -0.040505745, y: 0.0000057492407, z: 0.0000047586736, w: 0.99917936}
-      scale: {x: 0.99998146, y: 0.9910934, z: 1.0090178}
+      position: {x: -0.000000008776738, y: 0.38811952, z: 0.00000015602781}
+      rotation: {x: 0.000000048428845, y: -0.000000029802312, z: -0.00000017369157, w: 1}
+      scale: {x: 1.0000128, y: 1.00001, z: 0.9999987}
     - name: MiddleDistal.R_end
       parentName: MiddleDistal.R
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1631,19 +1696,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: RingProximal.R
       parentName: Hand.R
-      position: {x: -0.11950727, y: 1.1604365, z: -0.048044086}
-      rotation: {x: -0.09148616, y: -0.038429614, z: -0.007843914, w: 0.9950336}
-      scale: {x: 1.0025971, y: 1.0038875, z: 0.9935915}
+      position: {x: -0.11950743, y: 1.1604358, z: -0.04804433}
+      rotation: {x: -0.037838988, y: -0.037839416, z: 0.00016287355, w: 0.99856716}
+      scale: {x: 1.0027173, y: 1.0015863, z: 0.99578804}
     - name: RingIntermediate.R
       parentName: RingProximal.R
-      position: {x: 0.00000021040796, y: 0.3887366, z: -0.000000059604645}
-      rotation: {x: 0.041184638, y: -0.0000011585648, z: -0.0000006686894, w: 0.9991516}
-      scale: {x: 1.0000311, y: 1.0049337, z: 0.9951282}
+      position: {x: -0.00000002394836, y: 0.38873777, z: -0.00000044182923}
+      rotation: {x: -0.000000007450578, y: 0.0000005140899, z: 0.00000022468149, w: 1}
+      scale: {x: 1.0000135, y: 1.0000231, z: 1.000013}
     - name: RingDistal.R
       parentName: RingIntermediate.R
-      position: {x: -0.0000002231136, y: 0.38811934, z: -0.0000005364418}
-      rotation: {x: -0.04053059, y: 0.0000056782105, z: 0.0000055602695, w: 0.9991783}
-      scale: {x: 1.0000008, y: 0.9909969, z: 1.0091588}
+      position: {x: 0.000000011728048, y: 0.38812009, z: -0.000000027486877}
+      rotation: {x: 0.000000048428838, y: -0.000000029802312, z: -0.00000017369157, w: 1}
+      scale: {x: 0.9999941, y: 1.0000004, z: 0.99998987}
     - name: RingDistal.R_end
       parentName: RingDistal.R
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1651,19 +1716,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: LittleProximal.R
       parentName: Hand.R
-      position: {x: -0.3099242, y: 1.1598272, z: -0.062473297}
-      rotation: {x: -0.09145994, y: -0.038416106, z: -0.007733647, w: 0.99503744}
-      scale: {x: 1.002587, y: 1.0038759, z: 0.9936084}
+      position: {x: -0.3099243, y: 1.1598276, z: -0.062473565}
+      rotation: {x: -0.037838936, y: -0.03783947, z: 0.00016281941, w: 0.99856716}
+      scale: {x: 1.0026954, y: 1.0015755, z: 0.9957679}
     - name: LittleIntermediate.R
       parentName: LittleProximal.R
-      position: {x: 0.00000023775647, y: 0.38873708, z: -0.00000029802322}
-      rotation: {x: 0.041203037, y: -0.000001095235, z: -0.00000069872453, w: 0.9991508}
-      scale: {x: 1.0000095, y: 1.0048655, z: 0.99518585}
+      position: {x: 0.0000000068534973, y: 0.38873753, z: -0.00000029195098}
+      rotation: {x: -0.000000055879333, y: 0.0000005625186, z: 0.0000002826563, w: 1}
+      scale: {x: 1.0000118, y: 1.0000226, z: 1.0000019}
     - name: LiitleDistal.R
       parentName: LittleIntermediate.R
-      position: {x: -0.00000028002523, y: 0.3881201, z: 0.00000023841858}
-      rotation: {x: -0.040515866, y: 0.0000056781337, z: 0.0000037755929, w: 0.9991789}
-      scale: {x: 1.0000006, y: 0.99106246, z: 1.0090942}
+      position: {x: -0.000000028433988, y: 0.38812044, z: 0.00000013703227}
+      rotation: {x: 0.000000048428845, y: -0.000000029802312, z: -0.00000017369157, w: 1}
+      scale: {x: 1.000013, y: 1.0000112, z: 1.0000012}
     - name: LiitleDistal.R_end
       parentName: LiitleDistal.R
       position: {x: -0, y: 0.6594372, z: 0}
@@ -1671,19 +1736,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: ThumbProximal.R
       parentName: Hand.R
-      position: {x: 0.18976226, y: 0.38587534, z: -0.149907}
-      rotation: {x: -0.006574277, y: -0.061897304, z: -0.4742776, w: 0.8781721}
-      scale: {x: 1.0030035, y: 1.0010247, z: 0.99601805}
+      position: {x: 0.18976209, y: 0.38587633, z: -0.14990798}
+      rotation: {x: -0.006575491, y: -0.06190169, z: -0.4742847, w: 0.8781679}
+      scale: {x: 1.0031132, y: 1.001166, z: 0.99578816}
     - name: ThumbIntermediate.R
       parentName: ThumbProximal.R
-      position: {x: 0.0000006724149, y: 0.27775604, z: -0.00000047683716}
-      rotation: {x: 0.00006170709, y: -0.000009927896, z: 0.018376235, w: 0.9998312}
-      scale: {x: 0.99065036, y: 1.0094743, z: 1.0000322}
+      position: {x: 0.000000027939677, y: 0.27775633, z: 0.00000035762787}
+      rotation: {x: 0.000065571105, y: -0.0000039227275, z: 0.01837656, w: 0.99983114}
+      scale: {x: 0.99083644, y: 1.0092553, z: 1.000003}
     - name: ThumbDistal.R
       parentName: ThumbIntermediate.R
-      position: {x: -0.00000011920929, y: 0.45943764, z: -0.00000047683716}
-      rotation: {x: 0.000036804275, y: 0.00000039819665, z: 0.03240819, w: 0.99947476}
-      scale: {x: 1.0283467, y: 0.97256273, z: 0.9999892}
+      position: {x: -0.000000074505806, y: 0.45943862, z: 0.00000017881393}
+      rotation: {x: 0.000040302155, y: 0.0000049124824, z: 0.032316357, w: 0.99947774}
+      scale: {x: 1.0277252, y: 0.9731279, z: 0.999988}
     - name: ThumbDistal.R_end
       parentName: ThumbDistal.R
       position: {x: -0, y: 0.8474629, z: 0}
@@ -1691,9 +1756,9 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: BackPack
       parentName: Chest
-      position: {x: 0.0000001010776, y: 0.9471307, z: -1.964752}
-      rotation: {x: -0.99716085, y: 0.000000034183817, z: 0.000000022818035, w: -0.075301826}
-      scale: {x: 1.0000627, y: 1.0000274, z: 1.0000203}
+      position: {x: 0.00000017804483, y: 0.9471305, z: -1.9647521}
+      rotation: {x: -0.9971608, y: 0.00000003418001, z: 0.000000022814374, w: -0.07530236}
+      scale: {x: 1, y: 0.99997383, z: 1.0000104}
     - name: BackPack_end
       parentName: BackPack
       position: {x: -0, y: 1.6084375, z: 0}
@@ -1701,24 +1766,24 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: UpperLeg.L
       parentName: Hip
-      position: {x: -1.4884572, y: 1.0578232, z: -0.13447694}
-      rotation: {x: -0.00011077523, y: 0.0011790912, z: 0.09351769, w: 0.995617}
-      scale: {x: 1.0000092, y: 1.0000064, z: 1}
+      position: {x: -1.4884572, y: 1.0578232, z: -0.13447686}
+      rotation: {x: -0.000110745415, y: 0.0011791328, z: 0.0935177, w: 0.9956169}
+      scale: {x: 0.99999577, y: 0.9999921, z: 0.99999994}
     - name: LowerLeg.L
       parentName: UpperLeg.L
-      position: {x: 0.00000005844049, y: 3.467965, z: -0.000000058847945}
-      rotation: {x: 0.05058495, y: 0.09176922, z: -0.0046679284, w: 0.99448365}
-      scale: {x: 1.000062, y: 1.0000527, z: 0.999999}
+      position: {x: 0.000000054831617, y: 3.4679644, z: -0.000000011656084}
+      rotation: {x: 0.05058495, y: 0.09176921, z: -0.004667946, w: 0.9944837}
+      scale: {x: 1.0000367, y: 1.0000435, z: 0.99998945}
     - name: Foot.L
       parentName: LowerLeg.L
-      position: {x: 0.000000048428774, y: 7.2712817, z: 0.00000013411045}
-      rotation: {x: -0.5908966, y: -0.071673185, z: -0.09808626, w: 0.79754835}
-      scale: {x: 0.99983215, y: 1.00014, z: 1.0001603}
+      position: {x: -0.000000027939677, y: 7.2712827, z: -0.00000010430813}
+      rotation: {x: -0.59089667, y: -0.07167317, z: -0.09808626, w: 0.7975483}
+      scale: {x: 0.99984324, y: 1.0001748, z: 1.000128}
     - name: Toes.L
       parentName: Foot.L
-      position: {x: 0.000000033527613, y: 2.343796, z: 0.000000029802322}
-      rotation: {x: -0.13375516, y: 0.0000001490116, z: 0.013403492, w: 0.9909238}
-      scale: {x: 1.0000129, y: 1.0007678, z: 0.99932414}
+      position: {x: 0.000000022351742, y: 2.3437955, z: -0.000000059604645}
+      rotation: {x: -0.13375509, y: 0.0000001452863, z: 0.013403506, w: 0.9909238}
+      scale: {x: 0.9999632, y: 1.0005745, z: 0.9994475}
     - name: Toes.L_end
       parentName: Toes.L
       position: {x: -0, y: 2.0403306, z: 0}
@@ -1726,24 +1791,24 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: UpperLeg.R
       parentName: Hip
-      position: {x: 1.488457, y: 1.0578232, z: -0.13447817}
-      rotation: {x: -0.00011077523, y: -0.0011790998, z: -0.09351767, w: 0.995617}
-      scale: {x: 1.0000083, y: 1.0000037, z: 1}
+      position: {x: 1.488457, y: 1.0578232, z: -0.13447826}
+      rotation: {x: -0.000110864625, y: -0.0011790688, z: -0.09351764, w: 0.9956169}
+      scale: {x: 0.99999136, y: 0.9999873, z: 0.99999994}
     - name: LowerLeg.R
       parentName: UpperLeg.R
-      position: {x: 0.00000004307367, y: 3.4679646, z: -0.000000009167707}
-      rotation: {x: 0.05058494, y: -0.09176913, z: 0.004667891, w: 0.99448365}
-      scale: {x: 1.00006, y: 1.0000545, z: 0.9999991}
+      position: {x: -0.000000014784746, y: 3.4679642, z: 0.000000013591489}
+      rotation: {x: 0.050584935, y: -0.09176913, z: 0.0046678674, w: 0.9944837}
+      scale: {x: 1.0000365, y: 1.0000421, z: 0.9999891}
     - name: Foot.R
       parentName: LowerLeg.R
-      position: {x: 0.000000059604645, y: 7.271282, z: 0.000000059604645}
-      rotation: {x: -0.59089655, y: 0.07167336, z: 0.098086335, w: 0.7975483}
-      scale: {x: 0.9998286, y: 1.0001329, z: 1.0001498}
+      position: {x: 0.000000031664968, y: 7.271283, z: -0.000000029802322}
+      rotation: {x: -0.5908965, y: 0.071673356, z: 0.09808634, w: 0.79754835}
+      scale: {x: 0.9998295, y: 1.0001622, z: 1.0001146}
     - name: Toes.R
       parentName: Foot.R
-      position: {x: 0.000000055879354, y: 2.343797, z: -0.00000008940697}
-      rotation: {x: -0.13375498, y: -0.0000000074505797, z: -0.013403356, w: 0.99092376}
-      scale: {x: 0.99992913, y: 1.0007147, z: 0.9992946}
+      position: {x: 0.00000015646219, y: 2.3437965, z: 0.000000834465}
+      rotation: {x: -0.13375524, y: -0.000000007450579, z: -0.013403372, w: 0.9909238}
+      scale: {x: 1.0000606, y: 1.0005958, z: 0.99951386}
     - name: Toes.R_end
       parentName: Toes.R
       position: {x: -0, y: 2.040331, z: 0}
@@ -1751,19 +1816,19 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: "\u30B3\u30AF\u30D4\u30C3\u30C8\u5185\u88C5 v2"
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: 0.0018406179, y: 15.700448, z: 0.27135217}
-      rotation: {x: -6.123235e-17, y: 1, z: 6.123235e-17, w: 0.00000019470718}
+      position: {x: 0.0008617105, y: 15.698426, z: 0.26858652}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: "\u7ACB\u65B9\u4F53"
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0, y: 16.512983, z: 3.4935904}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1.0882747, y: 1.0882747, z: 1.0882747}
+      position: {x: -0.000000019848812, y: 16.515268, z: 3.4591777}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
     - name: "\u7ACB\u65B9\u4F53.001"
       parentName: Original_barbatos_animation_try(Clone)
-      position: {x: -0.0000000066227397, y: 16.512983, z: 3.5828605}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1.0882747, y: 1.0882747, z: 1.0882747}
+      position: {x: 0.000000011466909, y: 15.93933, z: 3.816956}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
