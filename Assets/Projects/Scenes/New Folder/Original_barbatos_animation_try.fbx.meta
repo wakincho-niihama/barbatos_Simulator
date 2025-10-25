@@ -101,8 +101,8 @@ ModelImporter:
       name: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Attack_Gun"
       takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Attack_Gun"
       internalID: 3136888765407524859
-      firstFrame: 0
-      lastFrame: 39
+      firstFrame: 9.6
+      lastFrame: 31.5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -131,7 +131,7 @@ ModelImporter:
       takeName: "\u30A2\u30FC\u30DE\u30C1\u30E5\u30A2|Attack_Mace_front"
       internalID: 6103748377481171266
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 35.3
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -225,7 +225,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

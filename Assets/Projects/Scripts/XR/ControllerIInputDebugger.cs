@@ -10,7 +10,7 @@ public class ControllerInputDebugger : MonoBehaviour
         UnityEngine.XR.InputDevice leftHand = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
         //UnityEngine.XR.InputDevice rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
-                // ボタン入力
+        // ボタン入力
         if (leftHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.secondaryTouch, out bool secondButton))
             Debug.Log($"Left Button second: {secondButton:F2}");
 

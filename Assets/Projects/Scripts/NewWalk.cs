@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using NUnit.Framework;
 using TMPro;
 using Unity.Mathematics;
@@ -9,24 +10,31 @@ using UnityEngine.XR;
 [RequireComponent(typeof(Animator))]
 public class NewWalk : MonoBehaviour
 {
-    //各パラメータ
-    public float rotateSpeed = 120f;
+    [Header("参照先(スクリプト)")]
+    public GetControllerValues inputHandler;
+
+    //アニメ用インスタンス
+    public AnimationController animationController;
+    public Animator animator;
+
+    [Header("各パラメータ")]
+    public float rotateSpeedAmount = 30f;
     public float stepHeight = 0.5f;
     public float stepFrequency = 0.75f;
     public float boost_amount = 1.2f;
 
     private float boost;//移動時のスラスター倍率
 
-    public float RotationVelocity = 0;//旋回速度
+    public float RotationVelocity { get; private set; }//旋回速度
 
-    public float FrontVelocity = 0;//前方向移動速度
+    public float FrontVelocity { get; private set; }//前方向移動速度
     public float FrontVelocityAmount = 0;//前進移動量
     public float FrontVelocityAmount_Back = 0;//後進移動量
 
-    private float VerticalVelocity = 0;//縦方向
+    public float VerticalVelocity { get; private set; }//縦方向
     public float VerticalVelocityAmount = 0;//縦方向移動量
 
-    private float HorizontalVelocity = 0;//横方向
+    public float HorizontalVelocity { get; private set; }//横方向
     public float HorizontalVelocityAmount = 0;//横方向移動量
 
     //振動再現用変数
@@ -40,38 +48,45 @@ public class NewWalk : MonoBehaviour
     public float jumpPower = 5f;      // 上昇初速
     private bool isGrounded = true;   // 接地判定（簡易）
 
-    //アニメ用インスタンス
-    public AnimationController animationController;
-    public Animator animator;
-
-    //状態用変数
+    //状態用変数(スクリプトのみ使用)
     private bool isWalking;
     private bool isSidewalking;
     private bool isBackwalking;
-    private bool isBoosting;
-    private bool isJumping;
-    private bool isFalling;
-    private bool isTurningRight;
-    private bool isTurningLeft;
     private bool isIdle;
 
-    //アニメーション用変数
-    public float MoveX = 0f;
-    public float MoveZ = 0f;
+    //アニメーション用変数(外部参照でも使用)
+    public float MoveX { get; private set; }
+    public float MoveZ { get; private set; }
+    private bool isTurningRight;
+    private bool isTurningLeft;
+    private bool isJumpCharge;
+    private bool isJumping;
+    private bool isBackBoost;
+    private bool isBoosting;
+    private bool isRightBoost;
+    private bool isLeftBoost;
+    private bool isFalling;
+    private bool isHoldGun;
+    private bool isGunAttack;
+    private bool isMaceAttack;
 
-    //デバイス(コントローラ)設定
-    private InputDevice leftHand;
-    private InputDevice rightHand;
+    private Vector2 L_stickInput;
+    private Vector2 R_stickInput;
+    private bool JumpButton;
+    private bool thrastor;
+    private bool WeaponState;
+    public bool Attack { get; private set; }
 
-    private bool JumpButton = false;
-    private bool thrastor = false;
-    public bool isCockpitActivate;
+    public bool isCockpitActivate { get; private set; }//コクピット開閉アクションで使用
+
+    public bool CheckState;
 
 
     void ApplyBoost()
     {
-        animator.speed = 0f;//スラスター噴射中はアニメーション再生を停止
+        //animator.speed = 0f;//スラスター噴射中はアニメーション再生を停止
         boost = boost_amount;
+        isBoosting = true;
         step = 0;
     }
 
@@ -80,27 +95,22 @@ public class NewWalk : MonoBehaviour
         Debug.Log($"iswalking : {isWalking}");
         Debug.Log($"isBackwalking : {isBackwalking}");
         Debug.Log($"isSidewalking : {isSidewalking}");
+
         Debug.Log($"isBoosting : {isBoosting}");
         Debug.Log($"isJumping : {isJumping}");
         Debug.Log($"isfalling : {isFalling}");
+
         Debug.Log($"isIdle : {isIdle}");
+
         Debug.Log($"isTuringRight : {isTurningRight}");
         Debug.Log($"isTuringLeft : {isTurningLeft}");
+
+        Debug.Log($"Attack : {Attack}");
+
+        Debug.Log($"isHoldGun : {isHoldGun}");
     }
 
-
-    void Start()
-    {
-        animationController = GetComponent<AnimationController>();
-        animator = GetComponent<Animator>();
-
-        leftHand = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-
-        baseY = transform.position.y;
-    }
-
-    void Update()
+    void InitializePrameters()
     {
         //各変数初期化
 
@@ -113,106 +123,115 @@ public class NewWalk : MonoBehaviour
 
         boost = 1;//スラスター倍率初期値　1以上でスラスター、つまり加速
 
-        //各アニメーション判定変数の初期化
-        animator.speed = 1f;
-
         isWalking = false;
         isBackwalking = false;
         isSidewalking = false;
+
         isBoosting = false;
+        isBackBoost = false;
+        isRightBoost = false;
+        isLeftBoost = false;
+
+        isJumpCharge = false;
         isJumping = false;
         isGrounded = false;
         isFalling = false;
+
         isIdle = false;
+
         isTurningRight = false;
         isTurningLeft = false;
 
         thrastor = false;
         JumpButton = false;
+        Attack = false;
+        //WeaponState=WeaponState;//武器選択状態は次のUpdateでも引き継ぐ
 
         MoveX = 0f;
         MoveZ = 0f;
+    }
 
-        //コントローラ値読み取り
-        leftHand = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        Vector2 L_stickInput = Vector2.zero;
-        Vector2 R_stickInput = Vector2.zero;
+    void InputFromXR()//この部分によりScene中で使う変数をXRコントローラから取得
+    {
+        L_stickInput = inputHandler.L_stickInput;
+        R_stickInput = inputHandler.R_stickInput;
 
-        if (leftHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 L_axis))
-        {
-            L_stickInput.x = L_axis.x;
-            L_stickInput.y = L_axis.y;
-        }
-        if (rightHand.TryGetFeatureValue(CommonUsages.gripButton, out bool GripButton))
-        {
-            JumpButton = GripButton;
-        }
-        //Debug.Log($"is JumpButton : {JumpButton}");
-        if (leftHand.TryGetFeatureValue(CommonUsages.triggerButton, out bool TriggerButton))
-        {
-            thrastor = TriggerButton;
-        }
-        if (leftHand.TryGetFeatureValue(CommonUsages.menuButton, out bool CockpitButton))
-        {
-            isCockpitActivate = CockpitButton;
-        }
+        thrastor = inputHandler.L_triggerButton;
+        JumpButton = inputHandler.L_gripButton;
+        isCockpitActivate = inputHandler.L_stickButton;
+        WeaponState = inputHandler.R_menuButton;//weaponState:1->Gun,weaponState:0->Mace
+        Attack = inputHandler.R_triggerButton;//weaponState:1->isGunAttack=Attack,weaponState:0->isMaceAttack=Attack
+    }
 
-        if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 R_axis))
-        {
-            R_stickInput.x = R_axis.x;
-            R_stickInput.y = R_axis.y;
-        }
+
+    void Start()
+    {
+        animationController = GetComponent<AnimationController>();
+        baseY = -0.5f;
+    }
+
+
+    void Update()
+    {
+
+        InitializePrameters();
+        InputFromXR();
 
         //水平移動管理　vector3 localMoveへ代入
         //前移動
-        if (L_stickInput.y > 0.4f || Input.GetKey(KeyCode.W))
+        if (L_stickInput.y > 0.4f)
         {
             step = stepHeight;
             isWalking = true;
             FrontVelocity = FrontVelocityAmount;
             //以下を関数化しておく
-            if (Input.GetKey(KeyCode.LeftShift) || thrastor)//前進中スペース押下でスラスター噴射
+            if (thrastor)
             {
                 ApplyBoost();
             }
             FrontVelocity *= boost;
         }
-        else if (L_stickInput.y < -0.4f || Input.GetKey(KeyCode.S))//後移動
+        else if (L_stickInput.y < -0.4f)//後移動
         {
             step = stepHeight;
             isBackwalking = true;
             FrontVelocity = FrontVelocityAmount_Back;
-            if (Input.GetKey(KeyCode.LeftShift) || thrastor)//前進中スペース押下でスラスター噴射
+            if (thrastor)
             {
                 ApplyBoost();
+                isBackBoost = true;//後退ブースト時のみ特殊アニメーション
+                isBoosting = false;//後退時前進ダッシュはさせない
             }
             FrontVelocity *= boost;
         }//OK
 
         //横移動
-        if (L_stickInput.x > 0.4f || Input.GetKey(KeyCode.D))//右移動
+        if (L_stickInput.x > 0.4f)//右移動
         {
             step = stepHeight;
             MoveX = 1f;//blendtreeへの反映
             isSidewalking = true;
             HorizontalVelocity = HorizontalVelocityAmount;
             //以下を関数化しておく
-            if (Input.GetKey(KeyCode.LeftShift) || thrastor)//前進中スペース押下でスラスター噴射
+            if (thrastor)//前進中スペース押下でスラスター噴射
             {
                 ApplyBoost();
+                isRightBoost = true;
+                isBoosting = false;
             }
             HorizontalVelocity *= boost;
         }
-        else if (L_stickInput.x < -0.4f || Input.GetKey(KeyCode.A))//左移動
+        else if (L_stickInput.x < -0.4f)//左移動
         {
             step = stepHeight;
             MoveX = -1f;//blendtreeへの反映
             isSidewalking = true;
             HorizontalVelocity = -HorizontalVelocityAmount;
-            if (Input.GetKey(KeyCode.LeftShift) || thrastor)//前進中スペース押下でスラスター噴射
+            if (thrastor)//前進中スペース押下でスラスター噴射
             {
                 ApplyBoost();
+                isLeftBoost = true;
+                isBoosting = false;
             }
             HorizontalVelocity *= boost;
         }//OK
@@ -224,9 +243,10 @@ public class NewWalk : MonoBehaviour
         /// 
         //上昇下降の制御
 
-        if (Input.GetKey(KeyCode.UpArrow) || JumpButton)
+        if (JumpButton)
         {
             isGrounded = false;
+            isJumpCharge = true;
             isJumping = true;
             isFalling = false;
             if (VerticalVelocity < VerticalVelocityMAX)
@@ -247,6 +267,13 @@ public class NewWalk : MonoBehaviour
         }
 
         // --- 着地判定 ---
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, out hit, 2f))
+        {
+            baseY = hit.point.y; // 足元の地面の高さを更新
+        }
+
+        // --- 着地判定 ---
         Vector3 Jumpingpos = transform.position;
         if (Jumpingpos.y <= baseY && VerticalVelocity < 0)
         {
@@ -255,18 +282,19 @@ public class NewWalk : MonoBehaviour
             isGrounded = true;
             isFalling = false;
         }
+
         /////////////////
         /// 以下　rotarion
 
         //回転
         RotationVelocity = 0f;
-        if (R_stickInput.x > 0.4f || Input.GetKey(KeyCode.RightArrow))
+        if (R_stickInput.x > 0.4f)
         {
             isTurningRight = true;
             step = stepHeight;
             RotationVelocity = 1f;
         }
-        else if (R_stickInput.x < -0.4f || Input.GetKey(KeyCode.LeftArrow))
+        else if (R_stickInput.x < -0.4f)
         {
             isTurningLeft = true;
             step = stepHeight;
@@ -274,14 +302,25 @@ public class NewWalk : MonoBehaviour
         }
         //OK
 
+        ////////
+        /// 以下　武装管理
+        ///
+        isHoldGun = WeaponState;
+
+        //weaponState:1->isGunAttack=Attack,weaponState:0->isMaceAttack=Attack
+        if (isHoldGun)
+        {
+            isGunAttack = Attack;
+        }
+        else
+        {
+            isMaceAttack = Attack;
+        }
+
         /////////////////
         /// blendtree用のbool変数確認
-
         isSidewalking = math.abs(HorizontalVelocity) > 0.01f;
-        isBoosting = boost > 1f;
         isIdle = !isWalking && !isBackwalking && !isSidewalking && !isBoosting && !isJumping && !isFalling;
-
-        //CheckMovingState();
 
         /////////////////////////////
         //振動表現
@@ -312,7 +351,7 @@ public class NewWalk : MonoBehaviour
         transform.position += finalpos;
 
         //現在位置でのx-z回転
-        transform.Rotate(Vector3.up * RotationVelocity * rotateSpeed * Time.deltaTime);//回転
+        transform.Rotate(Vector3.up * RotationVelocity * rotateSpeedAmount * Time.deltaTime);//回転
 
         //blendtreeへの反映
         if (isWalking) MoveZ = 1f;
@@ -320,9 +359,23 @@ public class NewWalk : MonoBehaviour
 
         // AnimationControllerに値を送る
         animationController.UpdateMovement(MoveX, MoveZ);
-        animationController.UpdateSpecialStates(isBoosting, isJumping, isFalling, isTurningRight, isTurningLeft);
+        animationController.UpdateSpecialStates(isBoosting, isJumpCharge, isJumping, isFalling, isTurningRight, isTurningLeft, isHoldGun, isGunAttack, isMaceAttack, isGrounded, isBackBoost, isRightBoost, isLeftBoost);
 
-        CheckMovingState();
+        // --- 座標補正（床めり込み防止） ---
+        Vector3 pos = transform.position;
 
+        // 基準より下がっていたら強制的に補正
+        if (pos.y < baseY)
+        {
+            pos.y = baseY;
+            VerticalVelocity = 0f;   // 垂直速度リセット（下方向速度を消す）
+            isGrounded = true;       // 接地判定ON
+            isFalling = false;
+            isJumping = false;
+        }
+
+        transform.position = pos;
+
+        if (CheckState) CheckMovingState();
     }
 }

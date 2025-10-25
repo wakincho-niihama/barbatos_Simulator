@@ -5,10 +5,10 @@ public class KeepDistanceFromTarget : MonoBehaviour
     [Header("追従対象")]
     public Transform target;
 
-    [Header("静止時のオフセット（m, targetのローカル軸基準）")]
+    [Header("静止時のオフセット(m, targetのローカル軸基準)")]
     public Vector3 idleOffset = new Vector3(0f, 0f, 0f);
 
-    [Header("移動時のオフセット（m, targetのローカル軸基準）")]
+    [Header("移動時のオフセット(m, targetのローカル軸基準)")]
     public Vector3 movingOffset = new Vector3(0f, 0f, -5f);
 
     [Header("静止判定に使うしきい値")]
