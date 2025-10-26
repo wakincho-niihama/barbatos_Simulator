@@ -3,15 +3,22 @@ using Unity.XR.CoreUtils;  // XR Origin用
 
 public class LockPlayerPosition : MonoBehaviour
 {
+    [Header("追従対象")]
+    public Transform targetObject;
+
     public XROrigin xrOrigin;  // XR OriginをInspectorで指定
-    public Vector3 fixedPosition = new Vector3(-0.54f,0f,0f); // 固定したいワールド座標
+    public Vector3 fixedPosition { get; private set; }// 固定したい座標
     public bool lockRotation = true; // 向きも固定する場合
+
+    void Start()
+    {
+        fixedPosition = targetObject.position;
+    }
 
     void LateUpdate()
     {
         if (xrOrigin == null) return;
 
-        // ワールド座標を固定
         xrOrigin.transform.position = fixedPosition;
 
         if (lockRotation)

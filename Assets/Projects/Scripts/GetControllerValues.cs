@@ -5,11 +5,16 @@ public class GetControllerValues : MonoBehaviour
 {
     [Header("If you check Button state")]
     public bool showState;
+    [Header("If you input from Keyboard")]
+    public bool isInputFromKeyboard;
+
     //デバイス(コントローラ)設定
     private InputDevice leftHand;
     private InputDevice rightHand;
 
-    //入力値保管変数
+    /// <summary>
+    /// 入力値保管変数
+    /// </summary>
 
     //stickInput (Left or Right)
     public Vector2 L_stickInput;//{ get; private set; }
@@ -25,6 +30,24 @@ public class GetControllerValues : MonoBehaviour
     public bool R_menuButton { get; private set; }
     public bool R_triggerButton { get; private set; }
     public bool R_gripButton { get; private set; }
+
+    void InputFromKeyboard()
+    {
+        L_stickInput.y = Input.GetKey(KeyCode.W) ? 1f : Input.GetKey(KeyCode.S) ? -1f : 0f;
+        L_stickInput.x = Input.GetKey(KeyCode.D) ? 1f : Input.GetKey(KeyCode.A) ? -1f : 0f;
+        R_stickInput.x = Input.GetKey(KeyCode.RightArrow) ? 1f : Input.GetKey(KeyCode.LeftArrow) ? -1f : 0f;
+        R_stickInput.y = Input.GetKey(KeyCode.UpArrow) ? 1f : Input.GetKey(KeyCode.DownArrow) ? -1f : 0f;
+
+        L_stickButton = Input.GetKey(KeyCode.Y);
+        L_menuButton = Input.GetKey(KeyCode.U);
+        L_triggerButton = Input.GetKey(KeyCode.I);
+        L_gripButton = Input.GetKey(KeyCode.O);
+
+        R_stickButton = Input.GetKey(KeyCode.H);
+        R_menuButton = Input.GetKey(KeyCode.J);
+        R_triggerButton = Input.GetKey(KeyCode.K);
+        R_gripButton = Input.GetKey(KeyCode.L);
+    }
 
     void checkInput()
     {
@@ -50,6 +73,7 @@ public class GetControllerValues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isInputFromKeyboard) InputFromKeyboard();
 
         //コントローラ再接続時処理
         if (!leftHand.isValid)
@@ -111,23 +135,6 @@ public class GetControllerValues : MonoBehaviour
             R_menuButton = R_MenuButton;
         else
             R_menuButton = false;
-
-        //from keyboad
-        L_stickInput.y = Input.GetKey(KeyCode.W) ? 1f : Input.GetKey(KeyCode.S) ? -1f : 0f;
-        L_stickInput.x = Input.GetKey(KeyCode.D) ? 1f : Input.GetKey(KeyCode.A) ? -1f : 0f;
-        R_stickInput.x = Input.GetKey(KeyCode.RightArrow) ? 1f : Input.GetKey(KeyCode.LeftArrow) ? -1f : 0f;
-        R_stickInput.y = Input.GetKey(KeyCode.UpArrow) ? 1f : Input.GetKey(KeyCode.DownArrow) ? -1f : 0f;
-
-        L_stickButton = Input.GetKey(KeyCode.Y);
-        L_menuButton = Input.GetKey(KeyCode.U);
-        L_triggerButton = Input.GetKey(KeyCode.I);
-        L_gripButton = Input.GetKey(KeyCode.O);
-
-        R_stickButton = Input.GetKey(KeyCode.H);
-        R_menuButton = Input.GetKey(KeyCode.J);
-        R_triggerButton = Input.GetKey(KeyCode.K);
-        R_gripButton = Input.GetKey(KeyCode.L);
-
 
         if (showState) checkInput();
 

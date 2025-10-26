@@ -1047,6 +1047,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isMaceAttack
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isGunAttack
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8076129879222663441}
   m_Solo: 0
@@ -1231,6 +1234,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isMaceAttack
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isGunAttack
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8076129879222663441}
   m_Solo: 0
@@ -1397,31 +1403,31 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2557236326207772755}
-    m_Position: {x: 310, y: 130, z: 0}
+    m_Position: {x: 280, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -669323892623018728}
-    m_Position: {x: 310, y: 220, z: 0}
+    m_Position: {x: 280, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5620188250003012130}
-    m_Position: {x: 530, y: 260, z: 0}
+    m_Position: {x: 530, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7022394629422175163}
     m_Position: {x: 280, y: 470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6821611253768335999}
-    m_Position: {x: -200, y: 350, z: 0}
+    m_Position: {x: -200, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3233504246829478142}
-    m_Position: {x: 30, y: 330, z: 0}
+    m_Position: {x: 30, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8987549573341262511}
-    m_Position: {x: -330, y: 290, z: 0}
+    m_Position: {x: -330, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8140276307069998210}
     m_Position: {x: -200, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5626015025693086707}
-    m_Position: {x: 40, y: 470, z: 0}
+    m_Position: {x: 90, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7168474377616440199}
     m_Position: {x: 530, y: 470, z: 0}
