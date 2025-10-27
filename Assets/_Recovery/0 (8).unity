@@ -16543,17 +16543,17 @@ MonoBehaviour:
   inputHandler: {fileID: 1972729093185697058}
   animationController: {fileID: 6389093981193879837}
   animator: {fileID: 1084516308948307857}
-  rotateSpeedAmount: 45
+  rotateSpeedAmount: 30
   stepHeight: 0.5
   stepFrequency: 0.75
-  boost_amount: 5
+  boost_amount: 1
   FrontVelocityAmount: 0.1
   FrontVelocityAmount_Back: -0.1
-  VerticalVelocityAmount: 0.15
-  HorizontalVelocityAmount: 0.15
+  VerticalVelocityAmount: 0.1
+  HorizontalVelocityAmount: 0.1
   gravity_amount: 1
   VerticalVelocityMAX: 5
-  jumpPower: 0.1
+  jumpPower: 0.05
   CheckState: 0
 --- !u!1 &5920698287061341414
 GameObject:
