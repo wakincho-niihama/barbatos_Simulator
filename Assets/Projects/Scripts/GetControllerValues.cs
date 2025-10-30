@@ -73,7 +73,7 @@ public class GetControllerValues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isInputFromKeyboard) InputFromKeyboard();
+
 
         //コントローラ再接続時処理
         if (!leftHand.isValid)
@@ -136,6 +136,8 @@ public class GetControllerValues : MonoBehaviour
         else
             R_menuButton = false;
 
+
+        if (isInputFromKeyboard) InputFromKeyboard();
         if (showState) checkInput();
 
     }
