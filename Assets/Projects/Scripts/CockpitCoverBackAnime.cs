@@ -42,7 +42,7 @@ public class CockpitCoverBackAnime : MonoBehaviour
     public bool isFinished = false;
 
     //アニメ用インスタンス
-    public NewWalk newWalk;
+    public NewWalk_CC newWalk;
 
 
     void Start()

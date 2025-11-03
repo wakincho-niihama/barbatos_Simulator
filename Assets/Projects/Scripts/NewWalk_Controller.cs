@@ -5,6 +5,7 @@ using Unity.Mathematics;
 [RequireComponent(typeof(Animator))]
 public class NewWalk_CC : MonoBehaviour
 {
+
     [Header("参照先(スクリプト)")]
     public GetControllerValues inputHandler;
     public AnimationController animationController;
